@@ -1,0 +1,15 @@
+<section class="container mt-2">
+    <h2>Listado de Productos</h2>
+    <hr>
+    <div class="row g-2 mt-3">
+        @for(product of arrProducts; track product._id){
+         <article class="col-9">
+            <p>{{product.name}}</p>
+           
+         </article>  
+        }
+        </div>
+         
+    
+     
+</section>

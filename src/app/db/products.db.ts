@@ -1,5 +1,7 @@
 import { IProduct } from "../interfaces/iproduct";
 
+
+
 export const PRODUCTOS: IProduct[] = [
     {"_id":"63740f5fe2c75d8744f80a2c","name":"Hombre Camisetas interiores de cuello a la caja, Pack de 6","description":"Tejido de punto ligero, cómodo y suave. ","price":23.99,"category":"hombre","image":"http://peticiones.online/images/products/image01.png","active":true},
     {"_id":"63740f5fe2c75d8744f80a2d","name":"Suéter Ligero con Frente Abierto Mujer","description":"Corte estrecho y cómodo que permite el movimiento ","price":18.9,"category":"mujer","image":"http://peticiones.online/images/products/image02.png","active":false},

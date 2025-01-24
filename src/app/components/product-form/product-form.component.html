@@ -1,0 +1,46 @@
+<section class="container mt-3">
+
+    <form [formGroup]="modelForm" (ngSubmit)="getDataForm()">
+
+        
+        <div class="my-2">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" class="form-control mb-3" name="name" id="name" placeholder="Introduce el nombre"
+            formControlName="name">
+
+        </div>
+
+        <div class="my-2">
+            <label for="description" class="form-label">Description</label>
+            <input type="text" class="form-control mb-3" name="description" id="description" placeholder="Introduce la descripcion"
+            formControlName="description">
+
+        </div>
+
+        <div class="my-2">
+            <label for="price" class="form-label">Price</label>
+            <input type="number" class="form-control mb-3" name="price" id="price" placeholder="Introduce el precio"
+            formControlName="price">
+
+        </div>
+
+        <div class="my-2">
+            <label for="category" class="form-label">Category</label>
+            <input type="text" class="form-control mb-3" name="category" id="category" placeholder="Introduce la categoria"
+            formControlName="category">
+
+        </div>
+
+        
+        <div class="my-2">
+            <label for="image" class="form-label">Image</label>
+            <input type="text" class="form-control mb-3" name="image" id="image" placeholder="Introduce la imagen"
+            formControlName="image">
+
+        </div>
+
+        <input type="submit" value="Enviar" class="btn btn-secondary">
+
+    </form>
+
+</section>

@@ -5,7 +5,7 @@
         @for(product of arrProducts; track product._id){
          <article class="col-9">
             <p>{{product.name}}</p>
-           
+            <app-product-card [producto]="product"></app-product-card>
          </article>  
         }
         </div>

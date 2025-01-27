@@ -12,17 +12,17 @@ import { ProductCardComponent } from "../product-card/product-card.component";
 })
 export class ProductListComponent {
 
-  arrProducts : IProduct[];
+  arrProductos : IProduct[];
   private productService = inject(ProductService);
 
 
   constructor() {
-    this.arrProducts = [];
+    this.arrProductos = [];
   }
 
   ngOnInit() : void {
 
-    this.arrProducts = this.productService.findAll();
+    this.arrProductos = this.productService.findAll();
 
   }
 

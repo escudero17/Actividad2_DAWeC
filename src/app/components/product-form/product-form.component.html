@@ -1,5 +1,5 @@
 <section class="container mt-3">
-
+    <h5 clas="my-3">Formulario de Alta de producto</h5>
     <form [formGroup]="modelForm" (ngSubmit)="getDataForm()">
 
         
@@ -7,6 +7,9 @@
             <label for="name" class="form-label">Nombre</label>
             <input type="text" class="form-control mb-3" name="name" id="name" placeholder="Introduce el nombre"
             formControlName="name">
+            @if(checkControl('name', 'required')){
+                <p class="error">Campo requerido</p>
+            }
 
         </div>
 
@@ -14,6 +17,9 @@
             <label for="description" class="form-label">Description</label>
             <input type="text" class="form-control mb-3" name="description" id="description" placeholder="Introduce la descripcion"
             formControlName="description">
+            @if(checkControl('description', 'required')){
+                <p class="error">Campo requerido</p>
+            }
 
         </div>
 
@@ -21,6 +27,9 @@
             <label for="price" class="form-label">Price</label>
             <input type="number" class="form-control mb-3" name="price" id="price" placeholder="Introduce el precio"
             formControlName="price">
+            @if(checkControl('price', 'required')){
+                <p class="error">Campo requerido</p>
+            }
 
         </div>
 
@@ -28,18 +37,38 @@
             <label for="category" class="form-label">Category</label>
             <input type="text" class="form-control mb-3" name="category" id="category" placeholder="Introduce la categoria"
             formControlName="category">
+            
+            @if(checkControl('category', 'required')){
+                <p class="error">Campo requerido</p>
+            }
 
         </div>
 
         
-        <div class="my-2">
+        <div class="my-2" >
             <label for="image" class="form-label">Image</label>
             <input type="text" class="form-control mb-3" name="image" id="image" placeholder="Introduce la imagen"
             formControlName="image">
+           
 
         </div>
+        <div>
+            <h6>Activo</h6>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="active"  value="true" id="active" checked formControlName="active">
+            <label class="form-check-label" for="active">
+              True
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="active"  value="false" id="active" formControlName="active">
+            <label class="form-check-label" for="active">
+             False
+            </label>
+          </div>
 
-        <input type="submit" value="Enviar" class="btn btn-secondary">
+        <input type="submit" value="Enviar" class="btn btn-secondary" [disabled]="!modelForm.valid">
 
     </form>
 

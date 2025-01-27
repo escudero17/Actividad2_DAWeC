@@ -1,12 +1,14 @@
 <section class="container mt-2">
     <h2>Listado de Productos</h2>
     <hr>
-    <div class="row g-2 mt-3">
-        @for(product of arrProducts; track product._id){
-         <article class="col-9">
-            <p>{{product.name}}</p>
+    <div class="row g-2 my-3">
+        @for(product of arrProductos; track product._id){
+         <article class="col-md-6">
             <app-product-card [producto]="product"></app-product-card>
          </article>  
+        }
+        @empty {
+            <h3 class="text-primary">LISTADO VACIO</h3>
         }
         </div>
          
